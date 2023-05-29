@@ -4,8 +4,12 @@ import json
 import openpyxl
 
 def process_excel_files(folder_path):
+    print(folder_path)
+    # スクリプトの実行ディレクトリを取得
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
     # JSONファイルのパス
-    json_file_path = "data.json"
+    json_file_path = os.path.join(script_dir, "data.json")
 
     # JSONファイルからシート名とセルの指定と書き込む値を取得
     with open(json_file_path, "r") as json_file:
@@ -35,8 +39,8 @@ def process_excel_files(folder_path):
 
 # コマンドライン引数からフォルダパスを取得
 if len(sys.argv) < 2:
-    print("フォルダパスを指定してください。")
-    sys.exit(1)
+    folder_path = os.path.dirname(os.path.abspath(__file__)) # スクリプトの実行ディレクトリを使用
+else:
+    folder_path = sys.argv[1]
 
-folder_path = sys.argv[1]
 process_excel_files(folder_path)
