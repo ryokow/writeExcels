@@ -12,10 +12,10 @@
 1. [リリースページ](https://github.com/ryokow/writeExcels/releases)から最新版をダウンロードする
 2. zipファイルを任意の場所に展開する
 
-### openpyxlのインストール
-本スクリプトの実行にはopenpyxlライブラリが必要です。実行前に以下コマンドでインストールして下さい。
+### pywin32のインストール
+本スクリプトの実行にはpywin32ライブラリが必要です。実行前に以下コマンドでインストールして下さい。
 ```
-pip install openpyxl
+pip install pywin32
 ```
 
 # 使い方
