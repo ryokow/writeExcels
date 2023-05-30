@@ -19,8 +19,8 @@ def process_excel_files(folder_path):
 
     # フォルダ内の全てのエクセルファイルに対して処理を行う
     for filename in os.listdir(folder_path):
-        if filename.endswith(".xlsx"):
-            file_path = os.path.join(folder_path, filename)
+        file_path = os.path.join(folder_path, filename)
+        if os.path.isfile(file_path) and filename.lower().endswith((".xlsx",".xls",".xlsm")):
             wb = openpyxl.load_workbook(file_path)
 
             # 指定したシート名の存在チェック
