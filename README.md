@@ -44,6 +44,8 @@ python writeExcels.py <フォルダパス>
   }
 }
 ~~~
+cell_dataは"A1:D10"のように範囲で指定することもできます。
+
 data.jsonは必ず**writeExcels.pyと同じフォルダ**に置いてください。
 
 # 便利な使い方（Windows）
