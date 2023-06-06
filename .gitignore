@@ -2,3 +2,6 @@
 setup.py
 dist/
 build/
+Pipfile*
+writeExcels.spec
+
